@@ -35,9 +35,11 @@ public class CorsoDAO {
 				int periodoDidattico = rs.getInt("pd");
 
 				System.out.println(codins + " " + numeroCrediti + " " + nome + " " + periodoDidattico);
-
-				// Crea un nuovo JAVA Bean Corso
-				// Aggiungi il nuovo oggetto Corso alla lista corsi
+				
+				Corso nuovoCorso = new Corso(codins, numeroCrediti, nome, periodoDidattico);
+				corsi.add(nuovoCorso);
+				
+				
 			}
 
 			return corsi;
